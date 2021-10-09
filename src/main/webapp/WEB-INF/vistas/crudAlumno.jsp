@@ -222,7 +222,7 @@
 		 $('#id_table').DataTable({
 				data: lista,
 				searching: false,
-				ordering: true,
+				ordering: false,
 				processing: true,
 				pageLength: 5,
 				lengthChange: false,

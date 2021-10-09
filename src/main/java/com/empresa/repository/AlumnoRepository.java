@@ -10,8 +10,9 @@ import com.empresa.entity.Alumno;
 
 public interface AlumnoRepository extends JpaRepository<Alumno, Integer> {
 
+	//JPQL--> Son querys con clases no con tablas
 	
-	@Query("Select a from Alumno a where nombre like :fil")
+	@Query("Select a from Alumno a where nombre like :fil order by a.idAlumno desc")
 	public abstract List<Alumno> listaAlumnoPorNombreLike(@Param("fil") String filtro);
 
 	public abstract List<Alumno> findByDni(String dni);
